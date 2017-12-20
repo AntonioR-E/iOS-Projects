@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tip_Calulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restaurants-sandwiches-sandwich" translatesAutoresizingMaskIntoConstraints="NO" id="nbO-B3-yTX">
+                                <rect key="frame" x="87" y="0.0" width="146" height="568"/>
+                            </imageView>
+                            <view alpha="0.5" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYy-Yu-rt2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4L9-cS-u0b">
+                                <rect key="frame" x="20" y="90" width="280" height="49"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="-2" height="-3"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Amount" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xNb-tX-z41">
+                                <rect key="frame" x="20" y="169" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip: 15%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBq-9C-IMp">
+                                <rect key="frame" x="20" y="223" width="84.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
+                            <slider contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7fd-Uf-X6r">
+                                <rect key="frame" x="131" y="221" width="175" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="silderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6aR-lw-ePu"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount: " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzg-JW-3s3">
+                                <rect key="frame" x="20" y="291" width="280" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yU-k6-Ftm">
+                                <rect key="frame" x="20" y="356.5" width="280" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCE-6R-aUH">
+                                <rect key="frame" x="20" y="432" width="280" height="39"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dFv-h1-9cc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4L9-cS-u0b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2d2-Vg-xru"/>
+                            <constraint firstItem="nbO-B3-yTX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2hH-Gq-WXS"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PBq-9C-IMp" secondAttribute="trailing" constant="20" symbolic="YES" id="3OL-sU-LaT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nbO-B3-yTX" secondAttribute="trailing" constant="87" id="4V4-cM-VgX"/>
+                            <constraint firstItem="PBq-9C-IMp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5zn-2c-kqe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3yU-k6-Ftm" secondAttribute="trailing" constant="20" id="7s1-Rm-Whw"/>
+                            <constraint firstItem="hYy-Yu-rt2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9Qj-fM-8wl"/>
+                            <constraint firstItem="xNb-tX-z41" firstAttribute="top" secondItem="4L9-cS-u0b" secondAttribute="bottom" constant="30" id="9oR-cr-L4h"/>
+                            <constraint firstItem="hYy-Yu-rt2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DUk-uJ-okE"/>
+                            <constraint firstItem="yCE-6R-aUH" firstAttribute="top" secondItem="3yU-k6-Ftm" secondAttribute="bottom" constant="50" id="GdN-Bh-GKF"/>
+                            <constraint firstItem="7fd-Uf-X6r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="KoK-if-xaE"/>
+                            <constraint firstItem="Uzg-JW-3s3" firstAttribute="top" secondItem="7fd-Uf-X6r" secondAttribute="bottom" constant="40" id="PsF-Xc-v1M"/>
+                            <constraint firstItem="yCE-6R-aUH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QLE-VI-sFu"/>
+                            <constraint firstItem="PBq-9C-IMp" firstAttribute="top" secondItem="xNb-tX-z41" secondAttribute="bottom" constant="24" id="VSG-D5-ZDd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xNb-tX-z41" secondAttribute="trailing" constant="20" id="VVw-LA-bOh"/>
+                            <constraint firstItem="4L9-cS-u0b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="VdM-Qi-aeq"/>
+                            <constraint firstItem="3yU-k6-Ftm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YHZ-yd-QQy"/>
+                            <constraint firstItem="xNb-tX-z41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zpb-Zx-r2x"/>
+                            <constraint firstItem="7fd-Uf-X6r" firstAttribute="top" secondItem="xNb-tX-z41" secondAttribute="bottom" constant="22" id="azb-Uo-gJy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7fd-Uf-X6r" secondAttribute="trailing" constant="16.5" id="f8h-7J-xPu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4L9-cS-u0b" secondAttribute="trailing" constant="20" id="gpr-2a-Heh"/>
+                            <constraint firstItem="Uzg-JW-3s3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hxU-EN-YAh"/>
+                            <constraint firstItem="nbO-B3-yTX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="nEG-Ud-Pz5"/>
+                            <constraint firstItem="hYy-Yu-rt2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rdj-0Q-9d2"/>
+                            <constraint firstItem="3yU-k6-Ftm" firstAttribute="top" secondItem="Uzg-JW-3s3" secondAttribute="bottom" constant="40" id="t6p-ga-Rc6"/>
+                            <constraint firstItem="nbO-B3-yTX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tDr-Ib-Kss"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yCE-6R-aUH" secondAttribute="trailing" constant="20" id="vKd-p9-HUe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uzg-JW-3s3" secondAttribute="trailing" constant="20" id="vKy-dZ-ofW"/>
+                            <constraint firstItem="hYy-Yu-rt2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xtc-wX-AbY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="xNb-tX-z41" id="PFy-JL-a95"/>
+                        <outlet property="calcButton" destination="yCE-6R-aUH" id="qPi-Vc-kfG"/>
+                        <outlet property="tipAmountLabel" destination="Uzg-JW-3s3" id="j1p-Qi-gFd"/>
+                        <outlet property="tipLabel" destination="PBq-9C-IMp" id="gLz-c9-xuc"/>
+                        <outlet property="tipSlider" destination="7fd-Uf-X6r" id="Ko4-qZ-SR1"/>
+                        <outlet property="totalAmountLabel" destination="3yU-k6-Ftm" id="sx2-C6-XDz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.5" y="32.74647887323944"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="restaurants-sandwiches-sandwich" width="600" height="896"/>
+    </resources>
+</document>
